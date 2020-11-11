@@ -11,7 +11,7 @@ $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
  
  
-switch($num) {
+switch($message) {
     
     case "/about":
         forwardMessage($chatId, "3");
@@ -28,7 +28,6 @@ function forwardMessage ($chatId, $message) {
     file_get_contents($url);
     
 }
- 
  
  
  
