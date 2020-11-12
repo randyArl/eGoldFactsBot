@@ -14,10 +14,10 @@ $message = $update["message"]["text"];
 switch($message) {
     
     case "/about":
-        forwardMessage();
+        forwardMessage($chatId,3);
         break;
     case "/egoldfacts":
-        forwardMessage();
+        forwardMessage($chatId,mt_rand(4,60));
         break;
     default: 
         sendMessage($chatId, "default");
@@ -33,7 +33,7 @@ function sendMessage ($chatId, $message) {
  
 function forwardMessage () {
     
-    $url = $GLOBALS[website]."forwardMessage?chat_id=873518083&from_chat_id=-1001224074002&message_id=3";
+    $url = $GLOBALS[website]."/forwardMessage?chat_id=".$chatId."&from_chat_id=-1001224074002&message_id=".urlencode($message);
     file_get_contents($url);
     
 } 
