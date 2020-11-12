@@ -6,7 +6,6 @@ $website = "https://api.telegram.org/bot".$botToken;
 $update = file_get_contents('php://input');
 $update = json_decode($update, TRUE);
  
- 
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
  
@@ -17,7 +16,7 @@ switch($message) {
         forwardMessage($chatId, 3);
         break;
     case "/egoldfacts":
-        forwardMessage($chatId, mt_rand(4,60);
+        forwardMessage($chatId, rand(4,60));
         break;
     default: 
         sendMessage($chatId, "default");
