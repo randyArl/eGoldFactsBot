@@ -31,9 +31,9 @@ function sendMessage ($chatId, $message) {
     
 }
  
-function forwardMessage () {
+function forwardMessage ($chatId, $message) {
     
-    $url = $GLOBALS[website]."/forwardMessage?chat_id=".$chatId."&from_chat_id=-1001224074002&message_id=".urlencode($message);
+    $url = $GLOBALS[website]."/forwardMessage?chat_id=".$chatId."&from_chat_id=-1001224074002&message_id=".$message;
     file_get_contents($url);
     
 } 
