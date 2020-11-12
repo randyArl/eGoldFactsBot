@@ -17,7 +17,7 @@ switch($message) {
         forwardMessage($chatId,3);
         break;
     case "/facts@eGoldFactsBot":
-        forwardMessage($chatId,mt_rand(4,60));
+        forwardMessage($chatId,mt_rand(4,93));
         break;   
 }
  
