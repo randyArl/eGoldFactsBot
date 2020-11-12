@@ -14,7 +14,7 @@ $message = $update["message"]["text"];
 switch($message) {
     
     case "/about":
-        sendMessage($chatId, "default");
+        forwardMessage($chatId,3);
         break;
     case "/egoldfacts":
         forwardMessage($chatId,mt_rand(4,60));
