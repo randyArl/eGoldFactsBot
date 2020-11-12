@@ -17,7 +17,7 @@ switch($message) {
         forwardMessage($chatId, 3);
         break;
     case "/egoldfacts":
-        forwardMessage($chatId, mt_rnd(4,60);
+        forwardMessage($chatId, mt_rand(4,60);
         break;
     default: 
         sendMessage($chatId, "default");
