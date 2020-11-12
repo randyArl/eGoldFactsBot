@@ -13,22 +13,12 @@ $message = $update["message"]["text"];
  
 switch($message) {
     
-    case "/about":
+    case "/about@eGoldFactsBot":
         forwardMessage($chatId,3);
         break;
-    case "/egoldfacts":
+    case "/facts@eGoldFactsBot":
         forwardMessage($chatId,mt_rand(4,60));
-        break;
-    default: 
-        sendMessage($chatId, "default");
-    
-}
- 
-function sendMessage ($chatId, $message) {
-    
-    $url = $GLOBALS[website]."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
-    file_get_contents($url);
-    
+        break;   
 }
  
 function forwardMessage ($chatId, $message) {
