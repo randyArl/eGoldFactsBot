@@ -13,7 +13,7 @@ $message = $update["message"]["text"];
  
 switch($message) {
     
-    case /about@eGoldFacts_FR_bot":
+    case "/about@eGoldFacts_FR_bot":
         forwardMessage($chatId,4);
         break;
     case "/facts@eGoldFacts_FR_bot":
