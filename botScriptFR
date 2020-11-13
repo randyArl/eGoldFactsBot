@@ -23,7 +23,7 @@ switch($message) {
  
 function forwardMessage ($chatId, $message) {
     
-    $url = $GLOBALS[website]."/forwardMessage?chat_id=".$chatId."&from_chat_id=@eGoldFacts_FR&message_id=".$message;
+    $url = $GLOBALS[website]."/forwardMessage?chat_id=".$chatId."&from_chat_id=-1001304090532&message_id=".$message;
     file_get_contents($url);
     
 } 
