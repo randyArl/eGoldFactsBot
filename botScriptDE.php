@@ -14,10 +14,10 @@ $message = $update["message"]["text"];
 switch($message) {
     
     case "/about@eGoldFactsDEBot":
-        forwardMessage($chatId,4);
+        forwardMessage($chatId,2);
         break;
     case "/facts@eGoldFactsDEBot":
-        forwardMessage($chatId,mt_rand(5,93));
+        forwardMessage($chatId,mt_rand(3,93));
         break;   
 }
  
